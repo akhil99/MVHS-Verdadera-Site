@@ -1,0 +1,275 @@
+/*
+Theme Name: Verdadera
+Theme URI: https://github.com/akhil99/MVHS-Verdadera-Site
+Author: Akhil Palla
+Author URI: http://github.com/akhil99
+Description: Verdadera site theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: verdadera
+Tags: verdadera
+--------------------------------------------------------------*/
+@import url('bootstrap/css/bootstrap.min.css'); 
+@import url('bootstrap/css/bootstrap-theme.min.css'); 
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+
+article{
+    text-align: center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+footer{
+    padding: 20px;
+    border-top: 1px solid #DDD;
+}
+
+
+body > .container-fluid{
+    background-color: #EEE;    
+}
+
+.verd-title{
+    font-family: 'Slabo 27px', serif;
+    text-decoration: none;
+    color: #111;
+}
+
+.verd-title h1{
+    margin: 20px;
+}
+
+/* NAVBAR */
+.navbar-verd {
+    background-color: #424242;
+    border-color: #424242;
+    margin-bottom: 0;
+}
+/* title */
+.navbar-verd .navbar-brand {
+    color: #F5F5F5;
+}
+.navbar-verd .navbar-brand:hover,
+.navbar-verd .navbar-brand:focus {
+    color: #FFFFFF;
+}
+.navbar-verd .navbar-nav a{
+    color: #E5E5E5;
+    background-color: #424242;
+}
+/* mobile version */
+.navbar-verd .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-verd .navbar-toggle:hover,
+.navbar-verd .navbar-toggle:focus {
+    background-color: #673AB7;
+}
+.navbar-verd .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-verd .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-verd .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-verd .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #673AB7;
+    }
+}
+
+.navbar-verd .navbar-nav > li > a:hover, .nav > li > a:focus {
+    background-color: #424242;
+}
+
+/* PAGE/POST STYLING */
+
+.page-header{
+    margin-top: 20px;
+}
+
+.page-header h1{
+    display: inline-block;
+    font-family: 'Slabo 27px', serif;
+}
+
+.page-header .edit-link{
+    float:right;
+}
+
+.issuuembed.issuu-isrendered{
+    width: 100% !important;
+    height: 70% !important;
+}
+
+.category-page{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* FLEXGRID STYLING */
+
+#flexgrid{
+    display: -ms-flexbox;
+	-ms-flex-direction: row;
+	-ms-flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#flexgrid .griditem img{
+    width: 100%;
+    height: auto;
+}
+
+
+#flexgrid .griditem:hover img{
+    opacity: 0.6;
+}
+
+
+#flexgrid .griditem a p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    margin: 0px;
+    color: #F5F5F5;
+    background: rgba(0,0,0,0.6);
+    text-align: center;
+    opacity: 0;
+    font-size: 1.5em;
+    
+    -webkit-transition: all 400ms;
+	-moz-transition: all 400ms;
+	transition: all 400ms;
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+}
+
+#flexgrid .griditem:hover a p{
+    opacity: 1;
+}
+
+@media (max-width: 300px){
+    #flexgrid .griditem a p{
+        opacity: 1;
+    }
+}
+
+ #flexgrid .griditem{
+     flex-shrink: 1;
+     position: relative;
+ }
+
+@media (min-width: 1500px){ 
+    #flexgrid .griditem{
+        width: 33%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px){
+    #flexgrid .griditem{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px){
+    #flexgrid .griditem{
+        width: 33%;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1000px){
+    #flexgrid .griditem{
+        width: 50%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 850px){
+    #flexgrid .griditem{
+        width: 100%;
+    }
+}
+
+
+/* SIDEBAR FLEXBOX */
+
+@media (min-width: 1200px){
+    #sidebar{
+        width: 350px;
+    }
+    #content-wrapper{
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1200px){
+    #sidebar{
+        width: 250px;
+    }
+    #content-wrapper{
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 700px){
+    #content {
+        width: 100%;
+    }
+    #sidebar{
+        width: 100%;
+    }
+    #content-wrapper{
+        flex-wrap: wrap;
+    }
+}
+
+#content{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#sidebar{
+    flex-shrink: 0;
+    border-left: 1px solid #DDD;
+    margin-top:10px;
+}
+
+#content-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+/* SIDEBAR WIDGET STYLING */
+
+#primary-sidebar li{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+.widgettitle{
+    font-size: 17px;
+    padding: 10px;
+    border-bottom: 3px solid #424242;
+    background: #424242;
+    color: #F5F5F5; 
+}
+
+#primary-sidebar .widget_meta ul li{
+    padding: 0;
+}
+
+.searchform .screen-reader-text{
+    display: none;
+}
+
+.searchform{
+    text-align: center;
+}
