@@ -120,6 +120,9 @@ body > .container-fluid{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
 }
 
 #flexgrid .griditem img{
@@ -166,6 +169,8 @@ body > .container-fluid{
 
  #flexgrid .griditem{
      flex-shrink: 1;
+     -webkit-flex-shrink: 1;
+     -ms-flex-shrink: 1;
      position: relative;
  }
 
@@ -208,6 +213,8 @@ body > .container-fluid{
     }
     #content-wrapper{
         flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
     }
 }
 
@@ -217,6 +224,8 @@ body > .container-fluid{
     }
     #content-wrapper{
         flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
     }
 }
 
@@ -229,6 +238,8 @@ body > .container-fluid{
     }
     #content-wrapper{
         flex-wrap: wrap;
+        -webkit-flex-wrap:wrap;
+        -ms-flex-wrap:wrap;
     }
 }
 
@@ -239,13 +250,19 @@ body > .container-fluid{
 
 #sidebar{
     flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
     border-left: 1px solid #DDD;
     margin-top:10px;
 }
 
 #content-wrapper{
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
 }
 
 /* SIDEBAR WIDGET STYLING */
